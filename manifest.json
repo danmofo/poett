@@ -1,0 +1,20 @@
+{
+	"name": "PoE trade tools",
+	"version": "1.0",
+	"description": "Adds additional functionality to poe.trade.",
+	"manifest_version": 2,
+	"background": {
+		"scripts": ["./background.js"],
+		"persistent": false
+	},
+	"content_scripts": [{
+		"matches": ["http://poe.trade/"],
+		"js": ["./content-script.js"],
+		"css": ["./style.css"]
+	}],
+	"permissions": [
+		"storage",
+		"declarativeContent",
+		"activeTab"
+	]
+}
